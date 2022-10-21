@@ -3,6 +3,7 @@ project(WinBGChanger)
 
 add_compile_options(-Wall -Wextra -pedantic)
 set(CMAKE_CXX_STANDARD 20)
+add_definitions(-DWINVER=_WIN32_WINNT_WIN10 -D_WIN32_WINNT=_WIN32_WINNT_WIN10)
 
 if(NOT DEFINED PLATFORM)
 	set(PLATFORM "." CACHE STRING "current platform")
@@ -14,7 +15,7 @@ endif()
 
 include_directories(
 	include
-#	"${Dependency_ROOT}/include"
+	"${ToolsSY_ROOT}/include"
 )
 
 #find_library(Dependency_LIB lib_name "${Dependency_ROOT}/lib/${BUILD_SFX}")

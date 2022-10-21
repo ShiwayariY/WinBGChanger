@@ -1,6 +1,6 @@
 #!/bin/bash
 
 export depends_template="\
-" #Dependency_ROOT=
+ToolsSY_ROOT="
 
 mk_target $@
